@@ -15,7 +15,7 @@ And("I enter an invalid password") do
   bbc_reg_page.input_vaild_email('jondon@fakeemail.com')
   bbc_reg_page.input_new_password('testwillfail')
   bbc_reg_page.click_for_verify_password
-  sleep 1
+  sleep 2
 end
 
 When("I try to create an account") do
@@ -24,7 +24,7 @@ When("I try to create an account") do
   bbc_reg_page.input_valid_postcode('W5 4XH')
   bbc_reg_page.select_sex
   bbc_reg_page.email_updates_selection('optOut')
-  sleep 1
+  sleep 2
   bbc_reg_page.confirm_register
 end
 
@@ -32,5 +32,5 @@ Then("I should be presented with an error") do
   # pending
   # Write code here that turns the phrase above into concrete actions
   bbc_reg_page.check_password_vailid_field
-  sleep 1
+  sleep 2
 end
